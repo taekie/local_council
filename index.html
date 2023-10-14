@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+<link rel="icon" href="./favicon.ico">
+
+    <link rel="icon" href="./favicon.png" />
+    <meta name="viewport" content="width=1200" />
+    <title>고위공직자 재산</title>
+    <meta name="description" content="고위공직자 재산" />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+  </head>
+
+  <style>
+body{
+font-family: 나눔바른고딕,pretendard,Arial, Helvetica, sans-serif;
+color:#444;
+}
+          #main {
+               display: flex;
+          flex-direction: column;
+          align-items: center;
+
+    transform-origin: top;
+          transform: scale(0.8);
+      }
+
+	  .footer {
+		font-size: 0.8em;
+		color: #888;
+		margin-top: 1em;
+	  }
+a, a:visited {
+    color: #5190FF;
+}
+  </style>
+  <body>
+    <div id="main">
+<h1>전국 지방의원 프로필 검색 (2023)</h1>
+<div id="observablehq-viewof-searchForm-8130b54f"></div>
+<div id="observablehq-table-8130b54f"></div>
+
+<div class="footer">정보디자인 - <a href=https://twitter.com/taekie >無異</a><br>
+    데이터 출처 - <a href=https://cfoi.or.kr/>정보공개센터
+    </a> - <a href=https://docs.openwatch.kr/data/local-council/profile target=_new>전국 지방의원 상세이력</a>
+    </div>
+        </div>
+      </body>
+
+      
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/@taekie/local_council.js?v=4";
+new Runtime().module(define, name => {
+  if (name === "viewof searchForm") return new Inspector(document.querySelector("#observablehq-viewof-searchForm-8130b54f"));
+  if (name === "table") return new Inspector(document.querySelector("#observablehq-table-8130b54f"));
+  return ["filtered"].includes(name);
+});
+</script>
